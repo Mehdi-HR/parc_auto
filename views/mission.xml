@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_x_mission" model="ir.actions.act_window">
+        <field name="name">Mission</field>
+        <field name="res_model">x_mission</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a mission !
+            </p>
+        </field>
+    </record>
+
+
+    <record id="view_x_mission_form" model="ir.ui.view">
+        <field name="name">Mission</field>
+        <field name="model">x_mission</field>
+        <field name="arch" type="xml">
+            <form string="Mission">
+                <sheet>
+                    <group>
+                        <notebook>
+                            <page string="Mission">
+                                <group>
+                                    <field name="x_name"/>
+                                    <field name="x_description"/>
+                                    <field name="x_city_id"/>
+
+                                </group>
+                            </page>
+                            <page string="Vehicles">
+                                <field name="x_vehicles"/>
+                            </page>
+
+                            <page string="Period">
+                                <group>
+                                    <field name="x_start"/>
+                                    <field name="x_end"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_x_mission_tree" model="ir.ui.view">
+        <field name="name">Missions</field>
+        <field name="model">x_mission</field>
+        <field name="arch" type="xml">
+            <tree string="Mission">
+
+                <field name="x_name"/>
+                <field name="x_description"/>
+                <field name="x_city_id"/>
+
+                <field name="x_vehicles"/>
+
+                <field name="x_start"/>
+                <field name="x_end"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="x_missions_menu"
+              name="Missions"
+              parent="x_root_menu"
+              action="action_x_mission"
+              sequence="-60"/>
+
+</odoo>

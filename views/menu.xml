@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="x_root_menu"
+              name="Admin"
+              sequence="-100"/>
+
+</odoo>
+<!--              name="Administration Fleet Management"
+-->

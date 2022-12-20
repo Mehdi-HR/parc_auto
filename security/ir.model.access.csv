@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access.city,access_x_city,fleet_management.model_x_city,base.group_user,1,1,1,1
+access.lessor,access_x_lessor,fleet_management.model_x_lessor,base.group_user,1,1,1,1
+access.driver,access_x_driver,fleet_management.model_x_driver,base.group_user,1,1,1,1
+access.vehicle,access_x_vehicle,fleet_management.model_x_vehicle,base.group_user,1,1,1,1
+access.driver_log,access_x_driver_log,fleet_management.model_x_driver_log,base.group_user,1,1,1,1
+access.mission,access_x_mission,fleet_management.model_x_mission,base.group_user,1,1,1,1
+access.contract,access_x_contract,fleet_management.model_x_contract,base.group_user,1,1,1,1

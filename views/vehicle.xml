@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="action_x_vehicle" model="ir.actions.act_window">
+        <field name="name">Vehicle</field>
+        <field name="res_model">x_vehicle</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a vehicle !
+            </p>
+        </field>
+
+    </record>
+
+    <record id="view_x_vehicle_form" model="ir.ui.view">
+        <field name="name">Vehicle</field>
+
+        <field name="model">x_vehicle</field>
+        <field name="arch" type="xml">
+
+            <form string="Vehicle">
+                <sheet>
+                    <group>
+                        <notebook>
+                            <page string="Vehicle">
+                                <group>
+                                    <field name="model_id"/>
+                                    <field name="model_year"/>
+                                    <field name="seats"/>
+                                    <field name="fuel_type"/>
+                                </group>
+                            </page>
+
+                            <page string="Identification">
+                                <group>
+                                    <field name="license_plate"/>
+                                    <field name="vin_sn"/>
+                                    <field name="driver_id"/>
+                                </group>
+                            </page>
+
+                            <page string="Acquisition">
+                                <group>
+                                    <field name="x_mrouge"/>
+                                    <field name="acquisition_date"/>
+                                    <field name="net_car_value"/>
+                                </group>
+                            </page>
+
+                            <page string="Odometer">
+                                <group>
+                                    <field name="odometer"/>
+                                    <field name="odometer_count"/>
+                                    <field name="odometer_unit"/>
+                                </group>
+                            </page>
+
+                            <page string="Services">
+                                <field name="log_services"/>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+
+    <record id="view_x_vehicle_tree" model="ir.ui.view">
+        <field name="name">Vehicles</field>
+
+        <field name="model">x_vehicle</field>
+        <field name="arch" type="xml">
+
+            <tree string="Vehicle">
+
+                <field name="model_id"/>
+                <field name="model_year"/>
+                <field name="seats"/>
+                <field name="fuel_type"/>
+
+                <field name="license_plate"/>
+                <field name="vin_sn"/>
+                <field name="driver_id"/>
+
+
+                <field name="x_mrouge"/>
+                <field name="acquisition_date"/>
+                <field name="net_car_value"/>
+
+                <field name="odometer"/>
+                <field name="odometer_count"/>
+                <field name="odometer_unit"/>
+                <field name="log_services"/>
+
+            </tree>
+
+        </field>
+    </record>
+
+    <menuitem id="x_vehicles_menu"
+              name="Vehicles"
+              parent="x_root_menu"
+              action="action_x_vehicle"
+              sequence="-50"/>
+
+</odoo>
+        <!--              -->
+
